@@ -1,7 +1,7 @@
 # Bitcoin Return Calculator
 
 ## Overview
-This Python command-line program calculates the current value of a past Bitcoin investment using historical daily closing price data from a local CSV file.
+This Python command-line program calculates the current value of a past Bitcoin investment using historical daily closing price data from a local CSV file. The dataset used in this project contains Bitcoin prices from its earliest available date up to August 8, 2025.
 
 The user enters:
 1. A **buy date** (YYYY-MM-DD)  
