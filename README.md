@@ -1,24 +1,41 @@
-# Bitcoin Return Calculator
+# Bitcoin Investment Calculator
 
-## Overview
-This Python command-line program calculates the current value of a past Bitcoin investment using historical daily closing price data from a local CSV file. The dataset used in this project contains Bitcoin prices from its earliest available date up to August 8, 2025.
+A Python script that calculates the returns on Bitcoin investments using historical price data. Enter any past date and investment amount to see what your Bitcoin would be worth today.
 
-The user enters:
-1. A **buy date** (YYYY-MM-DD)  
-2. An **amount in USD**  
+## Features
+- **Historical Price Lookup**: Uses local CSV data to find Bitcoin prices on any given date.
+- **Flexible Date Matching**: If exact date not available, uses closest earlier trading day.
+- **Comprehensive Output**: Shows purchase details, Bitcoin units acquired, current value, and profit/loss.
+- **Clean Interface**: Simple command-line prompts with input validation.
 
-The program then:
-- Loads Bitcoin historical prices from `bitcoin_historical_data.csv`
-- Finds the closing price on the given date, or the closest earlier date available
-- Calculates the amount of BTC that could have been purchased at that time
-- Uses the most recent price in the dataset to determine the investment’s current value
-- Displays the final value, profit or loss in USD, and percentage return
+## How It Works
+1. **Input**: Enter a buy date (`YYYY-MM-DD`) and investment amount in USD.  
+2. **Price Lookup**: Script finds the closing price on your specified date (or nearest earlier date).  
+3. **Calculation**: Determines how much BTC you could have purchased and its current value.  
+4. **Results**: Displays profit/loss in both absolute dollars and percentage terms.
 
-No fees, taxes, or inflation adjustments are included.
+## CSV Data Format
+Expected CSV structure:
+- **Start**: Date column (YYYY-MM-DD format)  
+- **Close**: Bitcoin closing price in USD  
 
----
+## Code Structure
 
-## Skills Demonstrated
-- Object-Oriented Programming
-- Data parsing using Pandas and datetime objects
-- Working with time-series financial data
+### BitcoinData Class
+- Loads and processes CSV data.  
+- Provides date-based price lookups.  
+- Handles missing dates with fallback logic.  
+
+### Key Functions
+- `parse_buy_date()` — Validates date input format.  
+- `parse_amount()` — Handles USD amount parsing with comma support.  
+- `price_on_or_before()` — Finds closest available trading day.  
+- `format_money()` — Consistent currency formatting.  
+
+## Error Handling
+- **Invalid Dates**: Prompts for correct YYYY-MM-DD format.  
+- **Out of Range**: Validates dates against available data range.  
+- **Missing Data**: Uses nearest earlier date when exact match unavailable.  
+- **Invalid Amounts**: Requires positive numerical input.  
+
+## Example Output
