@@ -6,7 +6,7 @@ A Python script that calculates the returns on Bitcoin investments using histori
 - **Historical Price Lookup**: Uses local CSV data to find Bitcoin prices on any given date.
 - **Flexible Date Matching**: If exact date not available, uses closest earlier trading day.
 - **Comprehensive Output**: Shows purchase details, Bitcoin units acquired, current value, and profit/loss.
-- **Clean Interface**: Simple command-line prompts with input validation.
+- **Command Line Interface**: Simple command-line prompts with input validation.
 
 ## How It Works
 1. **Input**: Enter a buy date (`YYYY-MM-DD`) and investment amount in USD.  
