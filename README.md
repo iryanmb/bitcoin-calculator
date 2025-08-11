@@ -19,6 +19,6 @@ No fees, taxes, or inflation adjustments are included.
 ---
 
 ## Skills Demonstrated
--Object-Oriented Programming
--Data parsing using Pandas and datetime objects
--Working with time-series financial data
+- Object-Oriented Programming
+- Data parsing using Pandas and datetime objects
+- Working with time-series financial data
